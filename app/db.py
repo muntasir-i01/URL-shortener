@@ -1,6 +1,8 @@
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
 
-DATABASE_URL = "postgresql+asyncpg://shortener:shortener@localhost:5432/shortener"
+from decouple import config
+
+DATABASE_URL = config("DATABASE_URL")
 
 engine = create_async_engine(DATABASE_URL)
 async_session = async_sessionmaker(engine, expire_on_commit=False)

@@ -10,7 +10,9 @@ sqlalchemy = {extras = ["asyncio"], version = "*"}
 asyncpg = "*"
 redis = "*"
 pydantic = "*"
-
+alembic = "*"
+psycopg2-binary = "*"
+python-decouple = "*"
 
 [dev-packages]
 pytest = "*"

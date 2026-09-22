@@ -1,3 +1,6 @@
 import redis.asyncio as redis
 
-redis_client = redis.from_url("redis://localhost:6379")
+from decouple import config
+
+
+redis_client = redis.from_url(config("REDIS_URL"))
